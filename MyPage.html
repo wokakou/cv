@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <title>李冰的个人简历</title>
+    <script type="text/javascript" src="./js/fullPage.min.js"></script>
+    <style>
+		body {
+		      width: 100%;
+		          *cursor: default;
+		      overflow: hidden;
+		      font: 16px/1.5 "Microsoft YaHei";
+		  }
+		div,p ,h1,h2{
+		    margin: 0;
+		    padding: 0;
+		}
+		a  {
+			text-decoration: none;
+		  }
+		ul {
+		        list-style: none;
+		  }
+		  #pageContain {
+		      overflow: hidden;
+		  }
+		  .page {
+		      display: none;
+		      width: 100%;
+		      height: 100%;
+		      overflow: hidden;
+		      position: absolute;
+		      top: 0;
+		      left: 0;
+		  }
+		  .contain {
+		      width: 100%;
+		      height: 100%;
+		      display: none;
+		      position: relative;
+		      z-index: 0;
+		  }
+		  .current .contain,.slide .contain {
+		      display: block;
+		  }
+		  .current {
+		      display: block;
+		      z-index: 1;
+		  }
+		  .slide {
+		      display: block;
+		      z-index: 2;
+		  }
+		  .page1 {
+		      background: #22c3aa;
+		  }
+		  .page2 {
+		      background: #82C57E;
+		  }
+		  .page3 {
+		      background: #22c3aa;
+		  }
+		  .page4 {
+		      background: #129DE7;
+		  }
+		  .page5 {
+		      background: #22c3aa;
+		  }
+		  .page6 {
+		      background: #82C57E;
+		  }
+		  #navBar {
+		      z-index: 3;
+		      position: absolute;
+		      top: 10%;
+		      right: 3%;
+		  }
+		  #navBar .active {
+		      background: #ccc;
+		  }
+		  #navBar li {
+		  	  width: 40px;
+		      height: 40px;
+		      margin-bottom: 10px;
+		      cursor: pointer;
+		      border-radius: 50%;
+		      line-height: 40px;
+		      text-align: center;
+		      transition: all .7s ease;   
+		  }
+	    .content {
+	    	padding: 50px;
+	    	text-align: center;
+	    }
+		.page1 h1{
+				 margin-top: 5%;
+				 font-size: 3.5em;
+			     text-align: center;
+			     color: #eef3f0;
+			     text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+			}
+		.page1 strong{
+				 display: block;
+				 margin-top: 12%;
+				 font-size: 3.5em;
+			     text-align: center;
+			     color: #eef3f0;
+			}
+		.page1 span {
+			display: block;
+			font-size: 1.1em;
+			color: #aee2d9;
+		}
+		.page1 em {
+			display: block;
+			margin: 0.2em 0 0.1em 0;
+			font-size: 1.3em;
+			font-style: normal;
+			color: #fff;
+		}
+		.page1 p {
+			display: block;
+			font-size: 1.2em;
+			color: #008a75;
+		}
+        .page2 h1{
+				 margin-top: 10%;
+				 font-size: 3.8em;
+			     text-align: center;
+			     color: #eef3f0;
+			     text-shadow: 1px 2px #82C57E, 2px 4px #aee2d9;
+			}
+		.page2 span {
+			display: block;
+			margin: 0.2em 0 0.2em 0;
+			font-size: 1.7em;
+			color: #c0dfd9;
+		}
+		.page2 em {
+			display: block;
+			font-size: 1.3em;
+			font-style: normal;
+			color: #fff;
+		}
+		.page2 i {
+			font-style: normal;
+			display: block;
+			font-size: 1.3em;
+			color: #c0dfd9;
+		}
+		.page2 p {
+			display: block;
+			margin: 0.2em 0;
+			font-size: 1.3em;
+			color: #fff;
+		}
+		.page2 strong {		
+			color: #9f3;
+		}
+	    .page3 h1{
+				 margin-top: 10%;
+				 font-size: 3.8em;
+			     text-align: center;
+			     color: #eef3f0;
+			     text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+			}
+        .page3 .tag {
+        	text-align: center;
+        	margin: 15px 0;
+        }
+        .page3 .tag span {
+        	    background-color: #096254;
+			    color: #aee2d9;
+			    border-radius: 3px;
+			    display: inline-block;
+			    padding: 2px 8px;
+			    margin-right: 3px;
+			    margin-bottom: 3px
+        }
+        .page4 h1 {
+				 margin-top: 6%;
+				 font-size: 3.8em;
+			     text-align: center;
+			     color: #eef3f0;
+			     text-shadow: 1px 2px #129DE7, 2px 4px #aee2d9;
+			}
+        .page4 .row {
+        	display: flex;
+        	padding: 0 140px;
+        	margin-top:  40px;
+        	text-align: center;
+        }
+        .page4 .row div {
+        	display: inline-block;
+        	text-align: center;
+        }
+        .page4 .item {
+        	flex:1;
+        }
+        .page4 .IFE {
+        	background: #1e89e0;
+        	font-size: 52px;
+        	color: #d2e7f9;
+        	box-sizing: 100px;
+        }
+        .IFE .inner {
+        	box-sizing: 80px;
+        	margin-top: 10px;
+        }
+        .page4 .icon {
+
+        	height: 100px;
+        	width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .page4 img {
+        	height: 100px;
+        	width: 100px;
+        }
+        .page4 .des {
+        	height: 100px;
+        	vertical-align: top;
+        	text-align: center;
+        }
+        .page4 h2 {
+        	margin: 10px 10px; 
+        	color: #d2e7f9;
+        }
+        .page4 a{
+        	color: #d2e7f9;
+        }
+        .page4 a:hover {
+        	opacity: 0.6;
+        }
+        .des span {
+        	display: inline-block;
+        	margin-left: 10px;
+        	color: #9ad3de;
+        	font-size: 1.1em;
+        }
+        .page5 h1{
+				 margin: 5% 0 0.8em 0;
+				 font-size: 4em;
+			     text-align: center;
+			     color: #eef3f0;
+			     text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
+			}
+		.page5 strong{
+				 display: block;
+				 font-size: 2.5em;
+			     text-align: center;
+			     color: #008a75;
+			}
+		.page5 a{
+			color: #008a75;
+		}
+		.page5 a:hover {
+			color: #9f3;
+		}
+		.page5 span {
+			display: block;
+			font-size: 1.4em;
+			color: #aee2d9;
+		}
+    </style>
+</head>
+<body>
+	<div id="pageContain">	
+		<div class="page page1 current">
+			<div class="contain">
+				<div class="content">
+					<strong>一个想变身程序猿的银行狗</strong>
+					<h1>李冰</h1>
+					<span>一腔热血的激情 · 一夜失眠的创意 · 一个像素的执着</span>	
+					<em>自学前端一年</em>
+					<p>理论知识牢固 熟悉jquery、ES6、Vue框架</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="page page2">
+			<div class="contain">
+				<div class="content">
+					<h1>个人简介</h1>
+					<span>李冰 男</span>	
+					<em>西南财经大学 统计学本科</em>
+					<i>学习java的过程中入坑前端</i>
+					<p>寻求一份<strong>初级前端工程师</strong>的工作</p>
+				</div>
+			</div>
+		</div>
+		<div class="page page3">
+			<div class="contain">
+				<h1>自学之路</h1>
+				<div class="tag">
+					<span>w3school 在线教程</span>
+					<span>网络视频教程</span>
+				</div>
+				<div class="tag">
+					<span>《Head First HTML与CSS》</span>
+					<span>《CSS权威指南》</span>
+				</div>
+				<div class="tag">
+					<span>《JavaScript DOM编程艺术》</span>
+					<span>《JavaScript高级程序设计》</span>
+					<span>《JavaScript语言精粹》</span>
+					<span>《你不知道的javascript》</span>
+				</div>
+				<div class="tag">
+					<span>《锋利的jquery》</span>
+					<span>《ECMAScript 6 入门》</span>
+					<span>Vue全家桶</span>
+				</div>
+			</div>
+		</div>
+		<div class="page page4">
+			<div class="contain">
+				<h1>项目经验</h1>
+				<div class="row">
+					<div class="item">
+						<div class="icon IFE">
+							<div class="inner">IFE</div>
+						</div>
+						<div class="des">
+							<h2>百度前端学院</h2>
+							<span>初期的实战的各种小的demo</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="icon">
+							<a href="#"><img src="./img/shop.jpg"></a>
+						</div>
+						<div class="des">
+							<h2><a href="https://github.com/wokakou/Electronics-Shops.git">电商网站</a></h2>
+							<span>原生js编写的电商购物网站</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						<div class="icon">
+							<a href="#"><img src="./img/vue.jpg"></a>
+						</div>
+						<div class="des">
+							<h2><a  href="https://github.com/wokakou/sell.git">Vue仿饿了么</a></h2>
+							<span>使用Vue框架构建的饿了么单页应用</span>
+						</div>
+					</div>
+					<div class="item">
+						<div class="icon">
+							<a href="#"><img src="./img/tetris.png"></a>
+						</div>
+						<div class="des">
+							<h2><a  href="https://github.com/wokakou/Tetris.git">俄罗斯方块</a></h2>
+							<span>使用java语言编写的小游戏</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page page5">
+			<div class="contain">
+				<div class="content">
+					<h1>了解更多</h1>
+					<strong><a href="https://github.com/wokakou">GitHub主页</a></strong>
+					<span>e-mail: libingswufe@hotmail.com</span>	
+					<strong class="download"><a href="http://pan.baidu.com/s/1o795du6">下载简历</a></strong>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--alternative-->
+	<ul id="navBar">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<!--alternative-->
+	<script type="text/javascript">
+		var runPage;
+		runPage = new FullPage({
+		    id: 'pageContain',
+		    slideTime: 800,
+		    effect: {
+		        transform: {
+		           translate: 'X',
+		           scale: [0, 1],
+		    rotate: [270, 0]
+		        },
+		        opacity: [0, 1]
+		    },
+		    mode: 'wheel, touch, nav:navBar',
+		    easing: 'ease'
+		});
+	</script>>
+</body>
+</html>
